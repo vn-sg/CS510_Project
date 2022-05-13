@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 We have used backend `app.py` to handle API requests, to install dependencies for running, simply locate to our project folder and do
 * pip install
   ```sh
-  pip3 install -r ./ExLab/requirements.txt
+  pip3 install -r ./backend/requirements.txt
   ```
 
 ### Running the local server
@@ -40,11 +40,11 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Make sure you have installed **Dependencies** in the previous step
 2. Make sure you are located our project folder where the following folders exist:
-   - `./ExLab`
+   - `./backend`
    - `./extension`
-3. Enter the folder `Exlab` using
+3. Enter the folder `backend` using
    ```sh
-   cd ./ExLab
+   cd ./backend
    ```
 4. Start the server using
    ```sh
