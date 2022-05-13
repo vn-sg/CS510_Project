@@ -14,7 +14,7 @@ Reason why we picked Chrome extension as a platform:
 * Generality and easy to interact with web pages
 
 <br>
-Social Media can be one of the most significant carriers of information that handles a great extent of information exchange in our daily lives. However, false and deceptive information could slip in and take advantage of effectiveness of Social Media to spread widely and cause massive harm to users with no means to tell the worthiness of info. Thus, it is critical to provide each user a way to deterministically find out the authenticy of posts and news on social media.
+Social Media can be one of the most significant carriers of information that handles a great extent of information exchange in our daily lives. However, false and deceptive information could slip in and take advantage of the effectiveness of Social Media to spread widely and cause massive harm to users with no means to tell the worthiness of info. Thus, it is critical to provide each user a way to deterministically find out the authenticity of posts and news on social media.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
