@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Worthiness Check</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style type="text/css">
+      body {
+        background-color: #202124;
+      }
+      a:link, a:visited {
+        display: block;
+        width: 2em;  
+        padding: 0.2em;
+        line-height: 1.6;
+        background-color: #f2f2f2;
+        border: 1px solid transparent;
+         border-color: #aaa;
+        color: #000;
+        text-decoration: bold;
+        text-align: center;
+        float: right;
+        -webkit-box-shadow: inset 0 0 30px #fff;
+        box-shadow: inset 0 0 30px #fff;
+        border-radius: 2px;
+        -webkit-text-stroke: 2px rgba(0,0,0,1);
+      }
+      a.selected {
+        background-color: #eaeaea;
+        color: #000;
+        -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, .125);
+               box-shadow: inset 0 3px 3px rgba(0, 0, 0, .125);
+      }
+      a:hover {
+        background-color: #dadada;
+        color: #000;
+       -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, .125);
+               box-shadow: inset 0 3px 3px rgba(0, 0, 0, .125);
+      }
+      .flexContainer {
+        position: relative;
+        text-align: right;
+        display: flex;
+      }
+      #inputText {
+        font-family:'FontAwesome';
+        width: 22em;
+        height: 7em;
+        /* border-radius: 14px; */
+        padding-right: 5em;
+      /* -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+               box-shadow: 0 1px 1px rgba(0, 0, 0, .125); */
+      }
+      .output {
+        font-size: 1.3em;
+        /* width: 22em; */
+        border-radius: 20px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        color:rgb(180, 188, 201);
+        text-align: center;
+/*       -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+               box-shadow: 0 1px 1px rgba(0, 0, 0, .125);*/
+      }
+      .outputContainer {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      
+      .masterSwitch {
+        margin: 0 0 0 0;
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      /* Hide default HTML checkbox */
+      .masterSwitch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .buttonHolder {
+        border-radius: 34px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #36365C;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .buttonHolder:before {
+        border-radius: 50%;
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .buttonHolder {
+        background-color: #8C8DE2;
+      }
+
+      input:focus + .buttonHolder {
+        /* background-color: #8586DA; */
+        box-shadow: 0 0 1px #36365C;
+      }
+      
+      input:hover:not(:checked) + .buttonHolder {
+        background-color: #505181;
+        box-shadow: 0 0 1px #36365C;
+        transition: 0.3s;
+      }
+
+      input:checked + .buttonHolder:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      .switchContainer {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+      }
+
+      .text {
+        display: block;
+        font-size: 135%;
+        /* width: 2em;   */
+        padding: 0 1em 0em 0;
+        /* line-height: 2.6; */
+        /* background-color: #f2f2f2; */
+        /* border: 1px solid transparent;
+        border-color: #aaa; */
+        color: #fff;
+        text-decoration: bold;
+        text-align: center;
+        /* -webkit-box-shadow: inset 0 0 30px #fff; */
+        /* box-shadow: inset 0 0 30px #fff; */
+        /* border-radius: 2px; */
+        -webkit-text-stroke: 1px rgb(180, 188, 201);
+
+      }
+      /* .parentContainer {
+        background-color: #202124;
+        border-radius: 20px;
+      } */
+
+        .resultImg {
+          display: none;
+          width: 70vw;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+          animation: resultImgShowup 1s 0s;
+          transform: scale(0.85);
+        }
+
+        .resultImg:hover {
+          animation: resultImgHover 1s 0s;
+          transform: scale(0.85);
+        }
+
+        @keyframes resultImgShowup {
+        0% { transform: scale(1.1); opacity: 0 }
+        50% { transform: scale(1.3); opacity: .7; }
+        60% { transform: scale(0.6); opacity: 1 }
+        80% { transform: scale(0.95) }
+        100% { transform: scale(0.85) }
+        }
+
+        @keyframes resultImgHover {
+        0% { transform: scale(1.0); opacity: 1 }
+        /* 50% { transform: scale(1.6); opacity: .7; } */
+        60% { transform: scale(0.75); opacity: 1 }
+        80% { transform: scale(0.95) }
+        100% { transform: scale(0.85) }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="switchContainer">
+        <span class="text">Master Switch</span> 
+        <label class="masterSwitch">
+          <input id="masterSwitch" type="checkbox">
+          <span class="buttonHolder"></span>
+        </label>
+      </div>
+  
+      <textarea id="inputText" type="text" placeholder="Type in anything to search..."></textarea>
+      <div id="outputBox">
+        
+        <img id="passCheck" class="resultImg"> 
+        <img id="failCheck" class="resultImg"> 
+
+        <div class="outputContainer" >
+          <span class="output">Fake Possibility Score:&nbsp;&nbsp;</span>
+          <span id="outputText" class="output">This is the OUTPUT of the Worthiness Checker!!</span>
+        </div>
+        <div id="passText" class="output"> <span style="font-size: 130%;"> Congrats! </span> <br> Your input <strong>PASSED</strong> our Worthiness Check! </div>
+        <div id="failText" class="output"> <div style="font-size: 130%;"> Emmmm... </div> It appears you need to <strong> Verify the Authenticity </strong> of this information</div>
+      </div>
+      
+    </div>
+    
+
+    <script src="popup.js"></script>
+  </body>
+</html>
+
+
