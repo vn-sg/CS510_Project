@@ -58,6 +58,6 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- LINK -->
 ## LINK
 
-Project Link: [https://github.com/vn-sg/510_course_project](https://github.com/vn-sg/510_course_project)
+Project Link: [https://github.com/vn-sg/CS510_Project](https://github.com/vn-sg/CS510_Project)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
